@@ -1,0 +1,53 @@
+#root {
+  --sprite-speed: 0.8s;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.sprite-image {
+  height: 48px;
+  width: 48px;
+  background: url("ada_0.png") -48px 0px;
+  animation: play var(--sprite-speed) steps(4) infinite;
+}
+
+@keyframes play {
+  100% {
+    background-position: -48px -192px;
+  }
+}
+
+.sprite-girl {
+  width: 48px;
+  height: 48px;
+  background-image: url("ada_0.png");
+}
+
+.sprite-girl.left {
+  background-position-x: -48px;
+}
+
+.sprite-girl.down {
+  background-position-x: 0;
+}
+
+.sprite-girl.up {
+  background-position-x: -96px;
+}
+
+.sprite-girl.right {
+  background-position-x: -144px;
+}
+
+.sprite-girl.animate {
+  animation: sprite-play var(--sprite-speed) steps(4) infinite;
+}
+
+@keyframes sprite-play {
+  100% {
+    background-position-y: -192px;
+  }
+}
